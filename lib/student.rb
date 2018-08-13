@@ -8,12 +8,7 @@ def initialize(name, grade, id= nil)
 end 
 
 def self.create
-  sql = <<-SQL 
-  CREATE TABLE IF NOT EXISTS (
-  id INTEGER PRIMARY KEY , name TEXT,
-  grade INTEGER 
-  )
-  SQL 
+  
   DB[:conn].execute(sql)
 end 
 
