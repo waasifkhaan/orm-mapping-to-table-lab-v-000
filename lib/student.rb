@@ -17,10 +17,10 @@ def self.create_table
   DB[:conn].execute(sql)
 end 
 def self.drop_table
-  sql =  <<-SQL 
+  drop =  <<-SQL 
     DROP TABLE students 
     SQL
-  DB[:conn].ececute(sql)
+  DB[:conn].ececute(drop)
 end 
 
   # Remember, you can access your database connection anywhere in this class
