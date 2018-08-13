@@ -9,7 +9,10 @@ end
 
 def self.create
   sql = <<-SQL 
-  CREATE TABLE 
+  CREATE TABLE IF NOT EXISTS (
+  ID PRIMARY INTEGER , name TEXT,
+  GRADE INTEGER 
+  )
   
   SQL 
 end 
