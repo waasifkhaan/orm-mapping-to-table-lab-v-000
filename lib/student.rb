@@ -29,7 +29,7 @@ def save
   INSERT INTO students(name, grade) VALUES ( ?, ?)  
   SQL
   DB[:conn].execute(sql,self.name, self.grade)
-  @id = DB[:conn}.execute(SELECT last_insert_rowid )]
+  @id = DB[:conn}.execute(SELECT last_insert_rowid() from students)]
 end 
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]  
